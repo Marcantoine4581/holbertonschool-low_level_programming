@@ -10,7 +10,7 @@ int main(void)
 {
 	char c;
 	int i;
-	long int a; 
+	long int a;
 	long long int b;
 	float f;
 
