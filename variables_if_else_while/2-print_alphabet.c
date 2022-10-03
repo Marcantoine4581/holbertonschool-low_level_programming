@@ -12,9 +12,9 @@ int main(void)
 
 	while (ch <= 'z')
 	{
-		printf("%c ", ch);
+		printf("%c", ch);
 		ch++;
 	}
-	printf("\n");
+	printf("\n")
 	return (0);
 }
