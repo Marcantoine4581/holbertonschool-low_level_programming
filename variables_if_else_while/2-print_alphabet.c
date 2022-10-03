@@ -15,6 +15,6 @@ int main(void)
 		printf("%c", ch);
 		ch++;
 	}
-	printf("\n")
+	printf("\n");
 	return (0);
 }
