@@ -4,5 +4,5 @@ SRC = main.c school.c	# files with the .c extension will be stored in a variable
 OBJ = $(SRC::%.c=%.o)	# files with the .o extension will be stored in a variable OBJ
 NAME = school
 
-all:
+all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
