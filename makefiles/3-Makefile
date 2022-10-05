@@ -1,4 +1,4 @@
-CC = gcc	# compiler to use	
+CC = gcc	# compiler to use
 
 SRC = main.c school.c	# files with the .c extension will be stored in a variable SRC
 OBJ = $(SRC:%.c=%.o)	# files with the .o extension will be stored in a variable OBJ
@@ -19,4 +19,6 @@ fclean:
 	${RM} ${OBJ}	#oclean
 
 re:
-	fclean all
+	${RM} *~ ${NAME}
+	${RM} ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
