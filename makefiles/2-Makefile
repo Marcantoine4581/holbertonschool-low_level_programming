@@ -1,0 +1,8 @@
+CC = gcc	# compiler to use	
+
+SRC = main.c school.c	# files with the .c extension will be stored in a variable SRC
+OBJ = $(SRC::%.c=%.o)	# files with the .o extension will be stored in a variable OBJ
+NAME = school
+
+all:
+	${CC} ${OBJ} -o ${NAME}
