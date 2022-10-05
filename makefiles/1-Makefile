@@ -1,0 +1,6 @@
+CC = gcc	# compiler to use 
+
+SRC = $(wildcard *.c)	# $(wildcard pattern) is one of the functions for filenames. In this case, all files with the .c extension will be stored in a variable SRC.
+
+all:
+	gcc main.c school.c -o school
