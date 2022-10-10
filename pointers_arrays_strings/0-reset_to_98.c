@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * print_square - function that prints a square, followed by a new line.
- * @size: is the size of the square
- * If size is 0 or less, the function should print only a new line
- * Use the character # to print the square
+ * reset_to_98 - function that takes a pointer to an int as parameter
+ * and updates the value it points to to 98.
+ * @n : a pointer the integer we want to set to 98
+ *
  * Return:
  */
 void reset_to_98(int *n)
