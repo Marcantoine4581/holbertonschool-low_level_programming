@@ -9,7 +9,7 @@ char *leet(char *str)
 {
 	char *strenc = str;
 	char key[] = {'A', 'E', 'O', 'T', 'L'};
-	int value[] = {'4', '3', '0', '7', '1'};
+	int value[] = {4, 3, 0, 7, 1};
 	int i;
 
 	while (*str)
