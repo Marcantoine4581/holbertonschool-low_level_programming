@@ -21,7 +21,7 @@ char *leet(char *str)
 				*str = '0' + value[i];
 			}
 		}
-	str++
+	str++;
 	}
 
 	return (strenc);
