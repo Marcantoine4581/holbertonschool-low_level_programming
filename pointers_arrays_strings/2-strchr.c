@@ -5,7 +5,7 @@
  * @c: char to look for
  * Return: NULL if char not found, or pointer to first occurrence of char 'c'
  */
-ar *_strchr(char *s, char c)
+char *_strchr(char *s, char c)
 {
 	int i;
 
