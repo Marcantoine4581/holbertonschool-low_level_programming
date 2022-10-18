@@ -29,7 +29,7 @@ int isPrime(int n, int div)
 	if (n % div == 0)
 		return (0);
 
-	if (div == n /2)
+	if (div == n / 2)
 		return (1);
 
 	return (isPrime(n, div + 1));
