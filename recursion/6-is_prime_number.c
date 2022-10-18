@@ -1,5 +1,5 @@
 #include "main.h"
-int isPrime(int n, int i);
+int isPrime(int n, int div);
 /**
  * is_prime_number - function that returns 1 if the input integer is
  * a prime number, otherwise return 0.
@@ -8,27 +8,29 @@ int isPrime(int n, int i);
  */
 int is_prime_number(int n)
 {
+	int div = 2;
+
 	if (n < 3)
 	{
 		return (0);
 	}
 
-	return (isPrime(n, n - 1));
+	return (isPrime(n, div));
 }
 
 /**
  * isPrime - helper function for is_prime_number
  * @n: input number
- * @i: iterator
+ * @div : divisor
  * Return: 1 if true, 0 if false
  */
-int isPrime(int n, int i)
+int isPrime(int n, int div)
 {
-	if (i == 1)
-		return (1);
-
-	if (n % i == 0)
+	if (n % div == 0)
 		return (0);
 
-	return (isPrime(n, i - 1));
+	if (div == n /2)
+		return (1);
+
+	return (isPrime(n, div + 1));
 }
