@@ -23,6 +23,7 @@ int is_prime_number(int n)
  * Return: 1 if true, 0 if false
  */
 int isPrime(int n, int i)
+{
 	if (n % i == 0)
 		return (0);
 
@@ -30,3 +31,4 @@ int isPrime(int n, int i)
 		return (1);
 
 	return (isPrime(n, i - 1));
+}
