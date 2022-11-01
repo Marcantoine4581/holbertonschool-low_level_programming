@@ -12,15 +12,18 @@
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i;
+	int index;
 
-	if (array == NULL || size <= 0 || cmp == NULL)
+	if (array == NULL || cmp == NULL)
 		return (-1);
 
-	for (i = 0; i < size; i++)
+	else
 	{
-			if (cmp(array[i]) != 0)
-				return (i);
+		for (index = 0; index < size; index++)
+		{
+			if (cmp(array[index]) != 0)
+				return (index);
+		}
+		return (-1);
 	}
-	return (-1);
 }
