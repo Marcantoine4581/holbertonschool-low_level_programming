@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_number - function that prints numbers, followed by a new line.
+ * print_numbers - function that prints numbers, followed by a new line.
  * @separator: string to be printed between numbers.
  * @n: number of integers passed to the function.
  * @...: A variable number of parameters to calculate the sum of.
@@ -17,9 +17,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(num, n);
 
-	for (i = 0; i < count; i++)
+	for (i = 0; i < n; i++)
 	{
-		printf("%d", va_arg(num, int);
+		printf("%d", va_arg(num, int));
 
 		if (i != (n - 1) && separator != NULL)
 			printf("%s", separator);
