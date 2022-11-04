@@ -63,6 +63,7 @@ void print_string(va_list arg)
  * or char * is ignored.
  * If a string argument is NULL, (nil) is printed instead.
  */
+void print_all(const char * const format, ...)
 {
 	va_list args;
 	int i = 0, j = 0;
