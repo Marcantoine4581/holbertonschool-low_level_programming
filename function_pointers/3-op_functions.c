@@ -11,7 +11,7 @@ int op_add(int a, int b);
 	return (a + b);
 }
 
-/** 
+/**
  * op_sub - Returns the difference of two numbers
  * @a: The first number.
  * @b: The second number.
@@ -33,7 +33,7 @@ int op_mul(int a, int b);
 	return (a * b);
 }
 
-/** 
+/**
  * op_div - returns the result of the division of two numbers.
  * @a: The first number.
  * @b: The second number.
@@ -44,7 +44,7 @@ int op_div(int a, int b);
 	return (a / b);
 }
 
-/** 
+/**
  * op_mod - returns the remainder of the division of two number.
  * @a: The first number.
  * @b: The second number.
