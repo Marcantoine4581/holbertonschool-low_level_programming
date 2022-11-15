@@ -4,7 +4,6 @@
 
 /**
  * print_list - function that prints all the elements of a list_t list.
- * @list_t: structure
  * @h: a pointer which point the structure list_t.
  * If str is NULL, print [0] (nil)
  * Return: the number of nodes.
