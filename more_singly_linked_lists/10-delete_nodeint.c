@@ -28,7 +28,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 		delnode = delnode->next;
 	}
-	tmp = delnode->next;
+	temp = delnode->next;
 	delnode->next = temp->next;
 	free(temp);
 
