@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * flip_bit - function that returns the number of bits you would need to flip
- * to get from one number to another.
- * @n: The number to be printed in binary.
- * @m: The second number to be printed in binary.
- * Return: number of bits you would need to flip to get from one number to another.
+ * flip_bit - function that returns the number of bits you would need to flip.
+ * @n: The number.
+ * @m: number to transform to.
+ * Return: number of bits you would need to flip to get from one number
+ * to another.
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
