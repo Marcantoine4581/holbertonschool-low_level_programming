@@ -23,7 +23,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	for (node = 0; node < (index - 1); node++)
 	{
-		if (delnode->next == NULL)
+		if (delnode == NULL)
 			return (-1);
 
 		delnode = delnode->next;
