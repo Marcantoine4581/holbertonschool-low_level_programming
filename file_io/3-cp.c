@@ -56,14 +56,14 @@ int main(int argc, char *argv[])
 
 	if (from == -1 || r == 1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE\n");
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		free(buffer);
 		exit(98);
 	}
 
 	if (to == -1 || w == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		free(buffer);
 		exit(99);
 	}
