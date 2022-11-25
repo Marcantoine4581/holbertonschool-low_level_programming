@@ -46,7 +46,13 @@ int main(int argc, char *argv[])
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	w = write(to, buffer, r);
+
+	while (r > 0)
+	{
+		w = write(to, buffer, r);
+		r = read(from, buffer, 1024);
+		to = open(argv[2], O_WRONLY | O_APPEND);
+	}
 
 	if (from == -1 || r == 1)
 	{
