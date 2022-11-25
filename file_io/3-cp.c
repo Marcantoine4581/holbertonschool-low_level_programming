@@ -1,6 +1,25 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+void close_file(int file);
+
+/**
+ * close_file - Closes file descriptors.
+ * @file: The file descriptor to be closed.
+ */
+void close_file(int file)
+{
+	int c;
+
+	c = close(file);
+
+	if (c == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file);
+		exit(100);
+	}
+}
+
 /**
  * main - Copies the contents of a file to another file.
  * @argc: The number of arguments supplied to the program.
@@ -13,7 +32,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int from, to, r, w, cfrom, cto;
+	int from, to, r, w;
 	char *buffer;
 
 	if (argc != 3)
@@ -40,21 +59,12 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n");
 		free(buffer);
-		close(from);
-		close(to);
 		exit(99);
 	}
 
-	cfrom = close(from), cto = close(to);
-	if (cfrom == -1 || cto == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
-		exit(100);
-	}
-
 	free(buffer);
-	close(from);
-	close(to);
+	close_file(from);
+	close_file(to);
 
 	return (0);
 }
